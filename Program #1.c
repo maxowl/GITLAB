@@ -32,9 +32,11 @@ int chooseNoYes()
 		sscanf(input,"%c",&sure);
 		}
 	while((sure!='Y') && (sure!='N'));	/*check user enter only Y or N*/
-	if(sure == 'Y')						/*if user enter 'Y'*/
+	if(sure == 'Y')		/*if user enter 'Y'*/
+		print ("You choose 'Y'");
 		return 1;
 	else		/*if user enter 'N'*/
+		print ("You choose 'N'");
 		return 0;
 }
 
@@ -563,6 +565,7 @@ void nightLifePreEdit(PERSONALINFORMATION_T* personInfo)
 void lovePetsPreEdit(PERSONALINFORMATION_T* personInfo)
 {
 	int retval=0;
+	char e = "";
 	char input[MAXINPUT];
 	printf("Edit love pets\n");
 	lovePetsPre(personInfo);
@@ -582,6 +585,7 @@ void edit()
     char input[MAXINPUT];
 	char gender[MAXINPUT];
 	int choice=0;
+	int g = 1;
 	FILE* pFile_Ac=NULL;    /*Pointer to open file account.txt*/
 	FILE* pFile_MaleInfo=NULL;  /*Pointer to open file male_Info.txttxt*/
 	FILE* pFile_FemaleInfo=NULL;    /*Pointer to open file female_Info.txt*/
