@@ -25,7 +25,7 @@ int chooseNoYes()
 {
 	char input[MAXINPUT];
 	char sureYN;
-	char change1B;
+	char change1A;
 	do
 		{
 		printf("Are you sured to change this data?(' A ' or ' Y '): ");
@@ -51,6 +51,7 @@ void passwordEdit(ACCOUNT_T* account)
 {
 	int retval=0;
 	in j = 0;
+	char change2A;
 	char input[MAXINPUT];
 	char change2B
 	printf("Create new Password\n");
