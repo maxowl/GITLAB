@@ -48,7 +48,7 @@ void loginMenu()
 {
     char input[MAXINPUT];   /*For input string*/
     int choose=0;   /*For choose the menu*/
-    
+    int i = 0;
     printf("\n\t- Login -\n");
     printf("1) Matching\n");
     printf("2) Edit\n");

@@ -24,12 +24,12 @@
 int chooseNoYes()
 {
 	char input[MAXINPUT];
-	char sure;
+	char sureYN;
 	do
 		{
 		printf("Are you sured to change this data?(' A ' or ' Y '): ");
 		fgets(input,MAXINPUT,stdin);
-		sscanf(input,"%c",&sure);
+		sscanf(input,"%c",&sureYN);
 		}
 	while((sure!='Y') && (sure!='N'));	/*check user enter only Y or N*/
 	if(sure == 'Y')		/*if user enter 'Y'*/
@@ -49,6 +49,7 @@ int chooseNoYes()
 void passwordEdit(ACCOUNT_T* account)
 {
 	int retval=0;
+	in j = 0;
 	char input[MAXINPUT];
 	printf("Create new Password\n");
 	password(account);
@@ -71,6 +72,7 @@ void passwordEdit(ACCOUNT_T* account)
 void nameSurnameAccountIntEdit(PERSONALINFORMATION_T* personInfo)
 {
 	int retval=0;
+	int z =1;
 	char input[MAXINPUT];
 	printf("Create new name and surname\n");
 	nameSurnameAccountInt(personInfo);
